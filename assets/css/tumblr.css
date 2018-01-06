@@ -1,0 +1,547 @@
+body {
+    font-family: {font:Font for posts text};
+    {block:IfCustomGoogleFontsNAMEForPostsText}
+    font-family: '{text:Custom Google Fonts NAME for posts text}';
+    {/block:IfCustomGoogleFontsNAMEForPostsText}
+}
+.nav-menu {
+    font-family: {font:Font for navigation menu};
+    {block:IfCustomGoogleFontsNAMEForNavigationMenu}
+    font-family: '{text:Custom Google Fonts NAME for navigation menu}';
+    {/block:IfCustomGoogleFontsNAMEForNavigationMenu}
+}
+.post-title,
+ .link-title,
+  .search-overlay input {
+    font-family: {font:Font for posts titles};
+    {block:IfCustomGoogleFontsNAMEForPostsTitles}
+    font-family: '{text:Custom Google Fonts NAME for posts titles}';
+    {/block:IfCustomGoogleFontsNAMEForPostsTitles}
+} 
+.post-title,
+ .link-title {
+    font-size: {text:Posts titles font size};
+} 
+.post .typography {
+    font-size: {text:Posts text font size};
+}
+.sidebar .typography {
+    font-size: {text:Sidebar text font size};
+}
+.tweet {
+    font-size: {text:Tweets text font size};
+}
+.typography h1,
+ .typography h2,
+  .typography h3,
+   .typography h4,
+    .typography h5,
+     .typography h6 {
+    font-family: {font:Font for h tags};
+    {block:IfCustomGoogleFontsNAMEForHTags}
+    font-family: '{text:Custom Google Fonts NAME for h tags}';
+    {/block:IfCustomGoogleFontsNAMEForHTags}
+}    
+{block:IfCustomLoadingAnimationURL}
+.page-preloader,
+ .preloader {
+    background: url({text:Custom loading animation URL}) no-repeat center center;
+}
+{/block:IfCustomLoadingAnimationURL}
+
+/*HEADER*/
+.blog-title .wrap, .title-text {
+    font-family: {font:Font for header title};
+    {block:IfCustomGoogleFontsNAMEForHeaderTitle}
+    font-family: '{text:Custom Google Fonts NAME for header title}';
+    {/block:IfCustomGoogleFontsNAMEForHeaderTitle}
+    font-size: {text:Header title font size};
+}
+.page-preloader > .animation-wrap > .title-text {
+    font-size:{text:Preload page title font size};
+}
+.page-preloader > .animation-wrap > .loading-text {
+    font-size:{text:Preload page loading text font size};
+    margin-top:{text:Preload page loading text font size};
+}
+.slide-caption {
+    font-family: {font:Font for header image captions};
+    {block:IfCustomGoogleFontsNAMEForHeaderImageCaptions}
+    font-family: '{text:Custom Google Fonts NAME for header image captions}';
+    {/block:IfCustomGoogleFontsNAMEForHeaderImageCaptions}
+}
+.slide-caption {
+    font-size: {text:Header image captions font size};
+}
+.call-to-action .typography {
+    font-size: {text:Call to action font size};
+}
+@media all and (max-width: 648px) {
+    .blog-title .wrap, .title-text {
+        font-size: 26px;
+    }
+    .slide-caption {
+        font-size: 17px;
+    }
+    .call-to-action .typography {
+        font-size: 14px;
+    }
+}
+.slide:after {
+    background-color: {color:Header overlay color};
+    opacity: {text:Header image overlay opacity};
+}
+
+/*== PRELOADER COLORS ==*/
+.page-preloader {
+    color: {color:Preload page text color};
+    background-color: {color:Preload page background color};
+}
+.css-preloader-01 .css-animation {
+    border-left-color: rgba({RGBcolor:Preload page css animation color},.1);
+    border-right-color: rgba({RGBcolor:Preload page css animation color},.1);
+    border-bottom-color: rgba({RGBcolor:Preload page css animation color},.1);
+    border-top-color: rgba({RGBcolor:Preload page css animation color},.8);
+}
+.post .css-preloader-01 .css-animation {
+    border-left-color: rgba({RGBcolor:Posts preload css animation color},.1);
+    border-right-color: rgba({RGBcolor:Posts preload css animation color},.1);
+    border-bottom-color: rgba({RGBcolor:Posts preload css animation color},.1);
+    border-top-color: rgba({RGBcolor:Posts preload css animation color},.8);
+}
+.css-preloader-02 .css-animation {
+  box-shadow: inset 0 0 0 20px {color:Preload page css animation color};
+}
+.posts .css-preloader-02 .css-animation {
+  box-shadow: inset 0 0 0 20px {color:Posts preload css animation color};
+}
+
+/*== HEADER COLORS ==*/
+/*Header text - #F7F7F7*/
+.blog-title .wrap {
+    color: {color:Blog title color};
+}
+.blog-title .wrap {
+    border-color: {color:Blog title color};
+}
+.slider-nav > li:after {
+    background-color: {color:Blog title color};
+}
+/*Header text background*/
+header {
+    background-color: {color:Blog title background color};
+}
+/*Avatar border color*/
+.blog-avatar {
+    border-color: {color:Blog avatar border color};
+}
+/*Header captions text*/
+.slide-caption {
+    color: {color:Header image captions text color};
+}
+.scroll-down-button > svg {
+    fill: {color:Header captions text color};
+}
+
+/*== GENERIC COLORS ==*/
+/*Blog background - #F8F8F8 */
+body {
+    background-color: {color:Blog background color};
+}
+/*Accent - #F5AD58**/
+a, .post .typography a:hover,
+ .post a:hover,
+  .post-notes a:hover,
+   .tag:hover,
+    .post-button-s2 > .post-permalink > a:hover,
+     .question-asked-by > a:hover,
+      .more-button:hover,
+       .pagination > div > a:hover,
+        .sidebar .typography a,
+         .info-label .typography a,
+          .tag-page-label > span,
+           .search-page-label > span,
+            .post-title > a:hover,
+             .standard-pagination > a:hover,
+              .standard-pagination > span,
+               .post-caption a {
+    color: {color:Accent color};
+}
+.slider-nav > li.active:after,
+ .slider-nav > li:hover:after,
+  .scroll-down-button,
+   .post-button-s2 > .post-permalink > a,
+    .link-title,
+     .more-button,
+      .scroll-top,
+       .loading-info, 
+        .pagination > div > a,
+         .question-text,
+          .standard-pagination > a,
+           .link-website:hover, .color .link-website,
+            .slider-timer-bar,
+             .cookies-warning span {
+    background-color: {color:Accent color};
+}
+.typography blockquote,
+ .post-button-s2 > .post-permalink > a,
+  .post-caption blockquote,
+   .photoset-cell.has-caption:before,
+    .standard-pagination > a,
+     .standard-pagination > span {
+    border-color: {color:Accent color};
+}
+.scroll-top:hover svg,
+ .scroll-down-button:hover svg,
+  .pagination a:hover > svg {
+      fill: {color:Accent color};
+}
+/*Buttons text*/
+.more-button,
+ .standard-pagination > a,
+  .pagination > div > a,
+   .loading-info,
+    .link-title,
+     .question-text {
+    color: {color:Buttons text color};
+}
+.scroll-down-button:hover,
+ .more-button:hover,
+  .scroll-top:hover,
+   .standard-pagination > a:hover,
+    .standard-pagination > span,
+     .pagination > div > a:hover {
+    background-color: {color:Buttons text color};
+}
+.scroll-down-button > svg,
+ .scroll-top svg,
+  .sidebar .social-links.colorful .icon.icon-website,
+   .footer-wrap .social-links.colorful .icon.icon-website {
+    fill: {color:Buttons text color};
+}
+.css-preloader-01.loading-info.loading-info .animation-wrap .css-animation {
+    border-color: rgba({RGBcolor:Buttons text color}, 0.8) rgba({RGBcolor:Buttons text color}, 0.1) rgba({RGBcolor:Buttons text color}, 0.1);;
+}
+/*== Call to action message COLORS ==*/
+/*Call to action background*/
+.call-to-action {
+    background-color: {color:Call to action background color}
+}
+/*Call to action text*/
+.call-to-action {
+    color: {color:Call to action text color};
+}
+/*Call to action button background*/
+.call-to-action .button {
+    background-color: {color:Call to action button background color}
+}
+.call-to-action .button:hover {
+    color: {color:Call to action button background color}
+}
+/*Call to action button text*/
+.call-to-action .button {
+    color: {color:Call to action button text color};
+}
+.call-to-action .button:hover {
+    background-color: {color:Call to action button text color};
+}
+
+/*== MENU COLORS ==*/
+/*Menu background - #FAFAFA*/
+.nav-menu,
+ .nav-fl,
+  .nav-sl {
+    background-color: {color:Menu background color};
+}
+/*Menu text - #545454*/
+.nav-menu a {
+    color: {color:Menu link color};
+}
+.profile-button > svg,
+ .menu-button > svg,
+  .search-button > svg,
+   .drop-down > svg {
+    fill: {color:Menu link color};
+}
+.nav-fl > li:after,
+ .profile-button:after,
+  .menu-button:after,
+   .search-button:after {
+    background-color: {color:Menu link color};
+}
+/*Menu text hover - #F5AD58**/
+.nav-menu a:hover,
+ .nav-menu li:hover > a {
+    color: {color:Menu link hover color};
+}
+.profile-button:hover > svg,
+ .menu-button:hover > svg,
+  .search-button:hover > svg,
+   .drop-down:hover > svg {
+    fill: {color:Menu link hover color};
+}
+/*Menu second level background - #FAFAFA*/
+.nav-sl {
+    background-color: {color:Menu second level background color};
+}
+
+/*Menu second level text - #545454*/
+.nav-sl a {
+    color: {color:Menu second level link color};
+}
+.nav-sl > li:after,
+ .image-dd-links a:after {
+    background-color: {color:Menu second level link color};
+}
+/*Menu second level text hover - #F5AD58**/
+.nav-sl li a:hover {
+    color: {color:Menu second level link hover color};
+}
+
+/*== POSTS COLORS ==*/            
+/*Posta background - #FAFAFA*/
+.post > .wrapper:before,
+ .preloader,
+  .post-notes,
+   .disqus,
+    .fb-comments {
+    background-color: {color:Posts background color};
+}
+/*:Posts text - #545454*/
+.posts,
+ .post h1,
+  .post h2,
+   .post h3,
+    .post h4,
+     .post h5,
+      .post h6,
+       .post .typography a,
+        .post-notes a,
+         .post-title > a,
+          .post-caption {
+    color: {color:Posts text color};
+}
+.quote-text > svg {
+    fill: {color:Posts text color};
+}
+.post-title {
+    border-color: {color:Posts text color};
+}
+/*:Posts title - #545454*/
+.post-title,
+ .post-title > a {
+    color: {color:Posts title color};
+}
+/*:Posts links - #545454*/
+.post .typography a,
+ .reblog-info a {
+    color: {color:Posts links color};
+}
+/*Posts borders - #E8E8E8*/
+.chat-text > li,
+ .notes > li {
+    border-color: {color:Posts separator line color};
+}
+/*Posts quotes background - #EFEFEF*/
+.typography blockquote {
+    background-color: {color:Posts quotes background color};
+}
+/*Posts quotes text - #EFEFEF*/
+.typography blockquote,
+ .typography blockquote h1,
+  .typography blockquote h2,
+   .typography blockquote h3,
+    .typography blockquote h4,
+     .typography blockquote h5,
+      .typography blockquote h6,
+       .post-caption blockquote {
+    color: {color:Posts quotes text color};
+}
+/*Posts hover overlay - #F5AD58*/
+.overlay,
+ .post-caption a.nivo-lb:after {
+    background-color: {color:Posts hover overlay color};
+}
+/*Posts hover text - #F5AD58*/
+.masonry.masonry-caption-hover .caption-o .post-caption,
+ .masonry.masonry-caption-hover .caption-o .post-caption a,
+  .masonry.masonry-caption-hover .caption-o .post-caption h1,
+   .masonry.masonry-caption-hover .caption-o .post-caption h2,
+    .masonry.masonry-caption-hover .caption-o .post-caption h3,
+     .masonry.masonry-caption-hover .caption-o .post-caption h4,
+      .masonry.masonry-caption-hover .caption-o .post-caption h5,
+       .masonry.masonry-caption-hover .caption-o .post-caption h6,
+        .masonry.masonry-caption-hover .caption-o .post-caption blockquote,
+  .grid.grid-caption-hover .caption-o .post-caption,
+   .grid.grid-caption-hover .caption-o .post-caption a,
+    .grid.grid-caption-hover .caption-o .post-caption h1,
+     .grid.grid-caption-hover .caption-o .post-caption h2,
+      .grid.grid-caption-hover .caption-o .post-caption h3,
+       .grid.grid-caption-hover .caption-o .post-caption h4,
+        .grid.grid-caption-hover .caption-o .post-caption h5,
+         .grid.grid-caption-hover .caption-o .post-caption h6,
+          .grid.grid-caption-hover .caption-o .post-caption blockquote {
+    color: {color:Posts hover text color};
+}
+.masonry.masonry-caption-hover .caption-o .post-caption blockquote,
+ .grid.grid-caption-hover .caption-o .post-caption blockquote {
+    border-color: {color:Posts hover text color};
+}
+/*Posts tags - #DDDDDD*/
+.tags > .tag {
+    color: {color:Posts tags color};
+}
+/*Posts notes counter background - #949494*/
+.post-stats,
+ .share-buttons > .option-btn {
+    background-color: {color:Posts notes counter background color};
+}
+.share-buttons > .option-btn {
+    border-color: {color:Posts notes counter background color}; 
+}
+/*Posts notes counter text - #eaeaea*/
+.post-stats > div,
+ .post-stats > div > a,
+  .share-buttons > .option-btn {
+    color: {color:Posts notes counter text color};
+}
+.share-buttons > .option-btn svg {
+    fill: {color:Posts notes counter text color};
+}
+/*Posts notes counter hover color*/
+.post-stats a:hover,
+ .share-buttons > .option-btn:hover {
+    color: {color:Posts notes counter hover color};
+}
+.share-buttons > .option-btn:hover svg {
+    fill: {color:Posts notes counter hover color};
+}
+/*Posts buttons background - #e4e4e4*/
+.wrapper > .post-buttons {
+    background-color: {color:Posts buttons background color};
+}
+/*Posts buttons icon - #545454*/
+.post-date,
+ .post-date > a,
+  .post-button-s1 a {
+    color: {color:Posts buttons icon color};
+}
+.post-like svg,
+ .post-reblog svg,
+  .post-share svg {
+    fill: {color:Posts buttons icon color};
+}
+/*Posts buttons hover - #d95e40*/
+.post-buttons .post-date > a:hover,
+ .post-button-s1 > .post-permalink > a:hover {
+    color: {color:Posts buttons hover color};
+}
+.post-like:hover svg,
+ .post-reblog:hover svg,
+  .post-share:hover svg {
+    fill: {color:Posts buttons hover color};
+}
+/*== SIDEBAR COLORs ==*/
+/*Sidebar background - #444444*/
+.sidebar-tags a:hover {
+    color: {color:Sidebar background color};
+}
+.sidebar-content:before,
+ .link-host {
+    background-color: {color:Sidebar background color};
+}
+ /*Sidebar text - #EAEAEA*/
+ .sidebar,
+  .social-links > li > a,
+   .tweet-date,
+    .link-host,
+     .sidebar-tags a {
+    color: {color:Sidebar text color};
+}
+.sidebar-tags a:hover {
+    background-color: {color:Sidebar text color};
+}
+.sidebar .social-links a,
+ .sidebar-tags a {
+    border-color: {color:Sidebar text color};
+}
+.tweet > svg,
+ .sidebar .social-link > svg {
+    fill: {color:Sidebar text color};
+}
+.sidebar .social-link:hover > svg,
+ .sidebar .color .social-link > svg {
+    fill: #fafafa;
+}
+/*Sidebar Twitter separator - #656565*/
+.tweet {
+    border-color: {color:Sidebar Twitter separator color};
+}
+/*Sidebar Twitter links color*/
+.tweet-text a {
+    color: {color:Sidebar Twitter links color};
+}
+
+/*== FOOTER COLORS ==*/
+/*Footer background - #444444*/
+.tag-cloud a:hover,
+ .footer-search input {
+    color: {color:Footer background color};
+}
+.footer-wrap {
+    background-color: {color:Footer background color};
+}
+/*Footer text - #EAEAEA*/
+.footer-wrap .label,
+ .tag-cloud a,
+  .footer-sl li a {
+    color: {color:Footer text color};
+}
+.footer-wrap .social-links a,
+ .tag-cloud a,
+  .footer-sl > li > a {
+    border-color: {color:Footer text color};
+}
+.tag-cloud a:hover,
+ .footer-search input,
+  .footer-search:after {
+    background-color: {color:Footer text color};
+}
+.footer-wrap .social-link > svg {
+    fill: {color:Footer text color};
+}
+.footer-wrap .social-link:hover > svg,
+ .footer-wrap .color .social-link > svg {
+    fill: #fafafa;
+}
+/*Footer copyright background - #333333*/
+.copyright {
+    background-color: {color:Footer copyright background color};
+}
+/*Footer copyright text - #ECECEC*/
+.copyright,
+ .copyright a {
+    color: {color:Footer copyright text color};
+}
+
+/*Pinned posts icon - #eaeaea*/
+.pinn-icon > svg {
+    fill: {color:Pinned posts icon color};
+}
+/*Pinned posts icon background - #353535*/
+.pinn-icon > svg {
+    background-color: {color:Pinned posts icon background color};
+}
+/*Search and tag pages color*/
+.search-page-label, .tag-page-label {
+    color: {color:Search and tag pages text color};
+}
+
+/*css fix for grid layout*/
+
+.grid .photo-cover {
+    display: block;
+}
+.center-pictures .post-caption figure img {
+    margin: 0 auto;
+}
